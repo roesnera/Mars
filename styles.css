@@ -1,0 +1,200 @@
+html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    --color-primary: #dcd9d2;
+    --color-secondary: #e9f39d;
+    --color-tertiary: #4e463a;
+    --padding-horizontal: 4rem;
+    --title-font-size: 8.5rem;
+}
+
+/* Utilities */
+
+.flex-container {
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.center-hor-vert {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 50vh;
+    position: relative;
+    color: var(--color-secondary)
+}
+
+.title {
+    font-size: var(--title-font-size);
+    padding: 1rem 2rem;
+}
+
+.width-fix {
+
+    width: 70%;
+
+}
+
+.subtitle {
+    font-weight: 200;
+    font-size: 1.3em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtitle span {
+    font-size: 1.7em;
+}
+
+.subtitle * {
+    padding: 0 .2rem;
+}
+
+.email {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+.socials {
+    position: absolute;
+    bottom: 2rem;
+    left: var(--padding-horizontal);
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 26%;
+}
+
+.social-svg svg {
+    display: inline;
+    fill: var(--color-secondary);
+}
+
+/* MAIN SECTION */
+
+main {
+    background-color: var(--color-primary);
+}
+
+.section {
+    /* min-height: 100vh; */
+    padding: .5rem var(--padding-horizontal);
+}
+
+.section-title {
+    color: var(--color-secondary);
+    font-size: var(--title-font-size);
+}
+
+/* Section 1: VIDEO */
+
+.video-grid {
+    margin-top: 2rem;
+    height: 80vh;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.video-link {
+    /* height: 30%; */
+
+}
+
+/* Section 2: PHOTO */
+
+.picture-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    height: 70vh;
+}
+
+.picture {
+
+}
+
+/* Section 3: METRICS */
+
+.metrics-section {
+    height: 100vh;
+}
+
+.darken {
+    position: relative;
+    isolation: isolate;
+}
+
+.darken::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0, .25);
+    z-index: 100;
+}
+
+/* Section 4: PACKAGES */
+
+.packages-container {
+    margin-top: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: [zero] 40% [midline] auto [end];
+    gap: 2rem;
+    height: 70vh;
+    color: var(--color-tertiary)
+}
+
+.packages-container h4 {
+    font-size: 4.5rem;
+}
+
+.package-item {
+    border: 4px solid #a08e6b;
+    font-size: 2rem;
+    padding: .3rem 1rem;
+}
+
+.packages-right-col {
+    border: none;
+    display: grid;
+    grid-template-rows: 7rem auto;
+    row-gap: 8px;
+}
+
+
+
+/* Section 5: OFFERINGS */
+
+.offerings-grid {
+    height: 60vh;
+    grid-template-columns: 55% auto;
+}
+
+.offerings-left {
+    color: var(--color-tertiary);
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+/* Section 6: WHY */
+
+.why-section {
+    height: 60vh;
+}
+
+.why-section p {
+    font-size: 2.5rem;
+}

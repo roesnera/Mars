@@ -1,3 +1,5 @@
+@font-face {font-family: "Architype Bayer-type"; src: url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.eot"); src: url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.woff") format("woff"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.svg#Architype Bayer-type") format("svg"); }
+
 html, * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,9 @@ html, * {
 
 html {
     font-size: 100%;
+    font-family: 'Architype Bayer-Type', serif;
+    font-weight: 200;
+    text-transform: lowercase;
     --color-primary: #dcd9d2;
     --color-secondary: #e9f39d;
     --color-tertiary: #4e463a;
@@ -36,7 +41,10 @@ html {
 .hero {
     min-height: 50vh;
     position: relative;
-    color: var(--color-secondary)
+    color: var(--color-secondary);
+    background: url("./resources/hero.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .title {
@@ -55,6 +63,9 @@ html {
     font-size: 1.3em;
     justify-content: space-between;
     align-items: center;
+    mix-blend-mode: difference;
+    /* color: #fff; */
+    background: inherit;
 }
 
 .subtitle span {
@@ -106,14 +117,53 @@ main {
 
 .video-grid {
     margin-top: 2rem;
-    height: 80vh;
-    grid-template-columns: repeat(3, 1fr);
+    /* height: 80vh; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.video-link {
-    /* height: 30%; */
-
+.phone-item {
+    flex-basis: 30%;
 }
+
+.screen__1 {
+    background: url("./resources/clowncore.PNG");
+}
+
+.screen__2 {
+    background: url("./resources/pisces.PNG");
+}
+
+.screen__3 {
+    background: url("./resources/sping_outifts.PNG");
+}
+
+.screen__4 {
+    background: url("./resources/coachella.PNG");
+}
+
+
+.screen__5 {
+    background: url("./resources/pisces_horoscopes.PNG");
+}
+
+
+.screen__6 {
+    background: url("./resources/style_beads_w_me.PNG");
+}
+
+.phone-screen {
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1;
+    inset: var(--padding);
+    border-radius: calc(3*var(--border-radius)/5);
+    position: absolute;
+}
+
 
 /* Section 2: PHOTO */
 

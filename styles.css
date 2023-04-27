@@ -42,6 +42,39 @@ html {
     --title-font-size: 8.5rem;
 }
 
+@media (width > 1400px) {
+    html {
+        --padding-horizontal: 10rem;
+    }
+}
+
+@media (width > 1800px) {
+    html {
+        font-size: 140%;
+    }
+}
+
+@media (width < 1000px) {
+    html {
+        font-size: 80%;
+        --padding-horizontal: .5rem;
+    }
+}
+
+@media (width < 600px) {
+    html {
+        font-size: 70%;
+        --title-font-size: 6.5rem;
+    }
+
+}
+
+@media (width < 400px) {
+    html {
+        --title-font-size: 5.5rem;
+    }
+}
+
 /* Utilities */
 
 .flex-container {
@@ -63,7 +96,7 @@ html {
 /* HERO SECTION */
 
 .hero {
-    min-height: 50vh;
+    min-height: 65vh;
     position: relative;
     color: var(--color-secondary);
     background: url("./resources/hero.jpg");
@@ -104,8 +137,11 @@ html {
 }
 
 .email {
+    margin-top: 3rem;
     text-decoration: none;
     color: var(--color-secondary);
+    font-size: 1.7em;
+    font-family: inherit;
 }
 
 .socials {
@@ -152,8 +188,16 @@ main {
     gap: 2rem;
 }
 
+@media (width < 455px) {
+    .video-grid {
+        justify-content: center;
+    }
+}
+
 .phone-item {
     flex-basis: 30%;
+    display: grid;
+    justify-content: center;
 }
 
 .screen__1 {
@@ -198,8 +242,14 @@ main {
 .picture-group {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    height: 70vh;
+    /* height: 70vh; */
     margin-top: 2rem;
+}
+
+@media (width<800px) {
+    .picture-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .picture__1 {
@@ -246,7 +296,7 @@ main {
 
 .darken {
     margin: 6rem 0;
-    max-width: 80rem;
+    /* max-width: 80rem; */
     position: relative;
     isolation: isolate;
 }
@@ -260,6 +310,7 @@ main {
 }
 
 .darken-flex {
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -295,15 +346,29 @@ main {
     padding: .3rem 1rem;
 }
 
+@media (width < 800px) {
+    .packages-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: [zero] 20% [midline] auto [end];
+    }
+
+    .packages-right-col {
+        grid-row-start: end;
+        padding: 0;
+    }
+}
+
 .packages-right-col {
     border: none;
     display: grid;
-    grid-template-rows: 7rem auto;
+    grid-template-rows: 5.5rem calc(100% - 5.5rem - 4px);
     row-gap: 8px;
+    margin-top: -.3rem;
 }
 
 .package-right-col-small {
-    font-size: 1.2rem;
+    padding: 0 1rem;
+    font-size: 1.8rem;
 }
 
 
@@ -337,6 +402,10 @@ main {
 
 .offerings-subtitle {
     color: var(--color-tertiary-light);
+}
+
+.offerings-right li {
+    margin-left: 1.5rem;
 }
 
 /* Section 6: WHY */

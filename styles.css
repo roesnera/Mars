@@ -134,7 +134,9 @@ html {
     padding: 0 .2rem;
     /* color: white; */
     mix-blend-mode: difference;
+    color: #c3c681;
 }
+
 
 .email {
     margin-top: 3rem;

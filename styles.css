@@ -229,6 +229,7 @@ main {
 .picture {
     background-position: center;
     background-size: cover;
+    aspect-ratio: 1 / 1;
 }
 
 /* Section 3: METRICS */

@@ -155,6 +155,18 @@ html {
     width: 26%;
 }
 
+@media (width > 1300px) {
+    .socials {
+        width: 18%;
+    }
+}
+
+@media (width > 1800px) {
+    .socials {
+        width: 12%;
+    }
+}
+
 .social-svg svg {
     display: inline;
     fill: var(--color-secondary);

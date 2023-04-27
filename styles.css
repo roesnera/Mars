@@ -45,6 +45,7 @@ html {
     background: url("./resources/hero.jpg");
     background-size: cover;
     background-position: center;
+    isolation: isolate;
 }
 
 .title {
@@ -63,9 +64,8 @@ html {
     font-size: 1.3em;
     justify-content: space-between;
     align-items: center;
-    mix-blend-mode: difference;
-    /* color: #fff; */
     background: inherit;
+    /* color: #fff; */
 }
 
 .subtitle span {
@@ -74,6 +74,8 @@ html {
 
 .subtitle * {
     padding: 0 .2rem;
+    /* color: white; */
+    mix-blend-mode: difference;
 }
 
 .email {

@@ -14,6 +14,7 @@ html {
     --color-primary: #dcd9d2;
     --color-secondary: #e9f39d;
     --color-tertiary: #4e463a;
+    --color-tertiary-light: #70695d;
     --padding-horizontal: 4rem;
     --title-font-size: 8.5rem;
 }
@@ -173,19 +174,53 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     height: 70vh;
+    margin-top: 2rem;
+}
+
+.picture__1 {
+    background: url("./resources/silver_gloves.jpg");
+}
+
+.picture__2 {
+    background: url("./resources/bathing_suit.jpg");
+}
+
+.picture__3 {
+    background: url("./resources/pinstripe_corset.jpg");
+}
+
+.picture__4 {
+    background: url("./resources/white_top.jpg");
+}
+
+.picture__5 {
+    background: url("./resources/26_cake.jpg");
+}
+
+.picture__6 {
+    background: url("./resources/fuzzy_ears.jpg");
 }
 
 .picture {
-
+    background-position: center;
+    background-size: cover;
 }
 
 /* Section 3: METRICS */
 
 .metrics-section {
-    height: 100vh;
+    /* height: 100vh; */
+    font-size: 3rem;
+    color: var(--color-tertiary);
+}
+
+.metric-box {
+    margin: 3rem 0;
 }
 
 .darken {
+    margin: 6rem 0;
+    max-width: 80rem;
     position: relative;
     isolation: isolate;
 }
@@ -198,19 +233,34 @@ main {
     z-index: 100;
 }
 
+.darken-flex {
+    justify-content: space-between;
+}
+
+.darken-flex-item {
+    margin: 0 1.5rem;
+    padding: .3rem;
+}
+
+.metric-subtitle {
+    color: var(--color-tertiary-light);
+    margin: 2rem 0;
+}
+
 /* Section 4: PACKAGES */
 
 .packages-container {
     margin-top: 3rem;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: [zero] 40% [midline] auto [end];
     gap: 2rem;
-    height: 70vh;
+    /* height: 70vh; */
     color: var(--color-tertiary)
 }
 
 .packages-container h4 {
-    font-size: 4.5rem;
+    font-size: 3.6rem;
 }
 
 .package-item {
@@ -226,27 +276,51 @@ main {
     row-gap: 8px;
 }
 
+.package-right-col-small {
+    font-size: 1.2rem;
+}
 
 
 /* Section 5: OFFERINGS */
 
+.offerings-section {
+    margin-top: 5rem;
+}
+
 .offerings-grid {
-    height: 60vh;
+    /* height: 60vh; */
+    margin-top: 2rem;
     grid-template-columns: 55% auto;
+    gap: 1rem;
+    color: var(--color-tertiary);
+}
+
+.offerings-grid li {
+    margin: .7rem 0;
 }
 
 .offerings-left {
-    color: var(--color-tertiary);
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding-left: 2rem;
+}
+
+.offerings-right {
+    /* padding-left: 1rem; */
+    font-size: 1.7rem;
+}
+
+.offerings-subtitle {
+    color: var(--color-tertiary-light);
 }
 
 /* Section 6: WHY */
 
 .why-section {
-    height: 60vh;
+    /* height: 60vh; */
+    margin-top: 5rem;
 }
 
 .why-section p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin: 2rem 0;
 }

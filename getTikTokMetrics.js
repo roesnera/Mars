@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 
-const getMetrics = async () => {
+const getTikTokMetrics = async () => {
     const browser = await puppeteer.launch({
         headless: 'new',
         defaultViewport: null
@@ -31,6 +31,6 @@ const getMetrics = async () => {
     return metrics;
 }
 
-getMetrics();
+// getTikTokMetrics();
 
-export default getMetrics;
+export default getTikTokMetrics;

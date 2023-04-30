@@ -1,13 +1,19 @@
-import getMetrics from "./getMetrics.js";
+import getMetrics from "./getTikTokMetrics.js";
+import cheerio from "cheerio";
+import express from "express";
+import getTikTokMetrics from "./getTikTokMetrics.js";
+const PORT = 8000;
 
-console.log(metrics);
+const app = express();
 
-document.addEventListener("DOMContentLoaded", async () => {
-    const metrics = await getMetrics();
+app.listen(PORT, () => {
+    console.log(`listening on ${PORT}`);
+});
 
-    const tiktokFollowers = document.getElementById("followers");
-    tiktokFollowers.innerText = metrics[1];
+app.get("/", (req, res) => {
+    res.render("index");
+})
 
-    const tiktokLikes = document.getElementById("tiktokLikes");
-    tiktokLikes.innerText = metrics[2];
+app.get("/metrics", (req, res) => {
+    res.send(getTikTokMetrics());
 });
